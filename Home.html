@@ -1,0 +1,158 @@
+<html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+
+    <style>
+       
+    body {
+        font-family: "Segoe UI", Times New Roman, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: whitesmoke;
+        color: darkgray;
+    }
+
+    
+    header {
+        position: relative;
+        background-image:url('Bassopa Shop2.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 280px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45); /* escurece a imagem */
+    }
+
+    header h1 {
+        position: relative;
+        z-index: 1;
+        font-size: 2.5em;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+
+    
+    main {
+        max-width: 900px;
+        margin: 40px auto;
+        background-color: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    main p {
+        text-align: justify;
+        line-height: 1.7em;
+        font-size: 1.05em;
+    }
+
+   
+    footer {
+        background-color: black;
+        color: white;
+        padding: 15px 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9em;
+    }
+
+    footer a {
+        color: gold;
+        text-decoration: none;
+        margin-left: 8px;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    .socials {
+        text-align: right;
+    }
+
+    @media (max-width: 600px) {
+        footer {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+        .socials {
+            text-align: center;
+        }
+    }
+
+    .copyright {
+        background-color: gold;
+        color: black;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+    }
+</style>
+
+</head>
+
+<body>
+   
+    <header>
+        <h1>Bem-vindo!</h1>
+    </header>
+
+    <main>
+        <p>
+            Bem-vindo à BASSOPA SHOP, uma empresa dedicada à excelência na prestação de serviços profissionais.
+            
+            O nosso compromisso é oferecer soluções completas e personalizadas que garantem a satisfação e o sucesso dos nossos clientes.
+
+
+        </p>
+
+        <p>
+            Com uma equipa experiente e apaixonada pelo que faz, trabalhamos com qualidade, transparência e responsabilidade, assegurando que cada projeto seja executado com rigor e atenção aos detalhes.
+            
+            Seja para serviços técnicos, administrativos, de consultoria, limpeza, manutenção ou apoio empresarial, a nossa missão é simplificar a sua vida e contribuir para o crescimento do seu negócio.
+
+            Acreditamos que a confiança é o pilar das grandes parcerias, e por isso, cada cliente é tratado como parte da nossa família.
+            
+            Na BASSOPA SHOP, o seu objetivo é também o nosso — porque a sua preocupação é a nossa missão.
+        </p>
+    </main>
+
+  
+    <footer>
+        <div class="contact">
+            📞 Tel: <a href="https://wa.me/258869019789" target="_blank">(+258) 86 901 9789</a> |
+            📧 Email: <a href="mailto:bassopaferreirajr@gmail.com">bassopaferreirajr@gmail.com</a>
+        </div>
+
+        <div class="socials">
+            🌐 Siga-nos:
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+            <a href="https://www.youtube.com" target="_blank">YouTube</a> |
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+            <a href="https://wa.me/258869019789" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        &copy; “Cuidamos de tudo pra você” & “Sua preocupação é a nossa missão” - 2025
+    </div>
+
+</body>
+</html>

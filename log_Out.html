@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Inter, Arial, sans-serif;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background-image: url('Bassopa Shop1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+  }
+
+  .card {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    padding: 30px;
+    text-align: center;
+    border-top: 6px solid #1e88e5; /* azul */
+  }
+
+  .card h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #1e88e5;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  }
+
+  label {
+    display: block;
+    text-align: left;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #1e88e5;
+  }
+
+  input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffca28; /* amarelo */
+    border-radius: 8px;
+    margin-bottom: 14px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #1e88e5;
+    box-shadow: 0 0 6px rgba(30,136,229,0.4);
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+
+  .btn {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-confirmar {
+    background: linear-gradient(135deg, #1e88e5, #42a5f5);
+    color: white;
+    box-shadow: 0 4px 12px rgba(30,136,229,0.24);
+  }
+
+  .btn-cancelar {
+    background: #ffca28;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .btn:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+  }
+
+  /* link voltar */
+  .voltar {
+    margin-top: 16px;
+    display: block;
+    text-align: center;
+  }
+
+  .voltar a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .voltar a:hover {
+    text-decoration: underline;
+  }
+
+</style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+
+  <div class="card">
+    <h1>Área de Login</h1>
+
+    <form onsubmit="event.preventDefault(); validarLogin();">
+      <label for="email">E-mail</label>
+      <input id="email" type="email" placeholder="Digite seu e-mail" required />
+
+      <label for="senha">Senha</label>
+      <input id="senha" type="password" placeholder="Digite sua senha" required />
+
+      <div class="actions">
+        <button type="submit" class="btn btn-confirmar">Confirmar</button>
+        <button type="button" class="btn btn-cancelar" onclick="window.location.href='index.html'">Cancelar</button>
+      </div>
+
+      <div class="voltar">
+        <a href="index.html">← Voltar à Página Inicial</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function validarLogin(){
+      const email = document.getElementById('email').value.trim();
+      const senha = document.getElementById('senha').value.trim();
+
+      if(email === '' || senha === ''){
+        alert('Por favor, preencha todos os campos.');
+        return;
+      }
+
+      // Simulação de login
+      alert('Login realizado com sucesso!');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WELCOME</title>
+
+  <style>
+    body {
+      font-family: "Times New Roman", Helvetica, sans-serif;
+      font-size: 16px;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    /* ======= BARRA SUPERIOR ======= */
+    .top-bar {
+      background-color: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 20px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .top-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .top-left i {
+      color: red;
+      margin-right: 5px;
+    }
+
+    .top-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    select {
+      padding: 4px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .whatsapp {
+      display: flex;
+      align-items: center;
+      color: red;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .whatsapp i {
+      margin-right: 4px;
+    }
+
+    /* ======= CABEÇALHO ======= */
+    header {
+      position: relative;
+      background-image: url('Bassopa Shop3.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 280px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header img {
+      width: 200px;
+      position: absolute;
+      left: 40px;
+      top: 40px;
+    }
+
+    header h1 {
+      color: black;
+      margin-left: 260px;
+      margin-top: 0;
+      font-size: 32px;
+      text-decoration: underline;
+    }
+
+    .btn {
+      width: 150px;
+      padding: 10px;
+      margin: 10px;
+      background-color: green;
+      color: orange;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: dodgerblue;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* ======= NAVEGAÇÃO ======= */
+    nav {
+      background-color: lightgray;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: black;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: dodgerblue;
+      text-decoration: underline;
+    }
+
+    /* ======= SEÇÕES ======= */
+    section {
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background-image: url('Bassopa Shop1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 0;
+    }
+
+    .coluna {
+      background-color: rgba(192, 192, 192, 0.9);
+      width: 30%;
+      min-width: 280px;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      position: relative;
+    }
+
+    .coluna img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h1, h2, h3 {
+      color: dimgray;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 8px 0;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: black;
+    }
+
+    ul li a:hover {
+      color: dodgerblue;
+    }
+
+    /* ======= RODAPÉ ======= */
+    footer {
+      background-color: black;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: gold;
+      text-decoration: none;
+      margin-left: 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .socials {
+      text-align: right;
+    }
+
+    .copyright {
+      background-color: gold;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    @media (max-width: 800px) {
+      .coluna {
+        width: 90%;
+      }
+
+      .socials, .contact {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======= BARRA SUPERIOR ======= -->
+  <div class="top-bar">
+    <div class="top-left">
+      <span><i>🕒</i>Maputo Time: <span id="maputoTime"></span></span>
+      <span><i>🚗</i>Total Cars in Stock: 28,239</span>
+      <span>Today's Arrival Cars: 1,391</span>
+    </div>
+  </div>
+
+  <!-- ======= CABEÇALHO ======= -->
+  <header>
+    <img src="bassopa1.jpg" alt="Logo">
+    <h1>Bem-vindo</h1>
+    <div style="margin-left:260px;">
+      <button id="loginBtn" class="btn" onclick="handleLogin()">Login</button>
+      <button id="cadastroBtn" class="btn" onclick="window.location.href='cadastro.html'">Cadastrar</button>
+    </div>
+  </header>
+
+  <script>
+
+    // Atualiza a hora de Maputo em tempo real
+    function atualizarHora() {
+        const now = new Date();
+        const hora = now.toLocaleTimeString("pt-PT", { hour: "2-digit", minute: "2-digit" });
+        const diaSemana = now.toLocaleDateString("pt-PT", { weekday: "long" });
+        document.getElementById("maputoTime").textContent = `${hora}, ${diaSemana}`;
+    }
+    setInterval(atualizarHora, 1000);
+    atualizarHora();
+
+ //<!-- ======= SCRIPT LOGIN/LOGOUT ======= -->//
+    let isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const loginBtn = document.getElementById("loginBtn");
+
+    function atualizarBotao() {
+      if (isLoggedIn) {
+        loginBtn.textContent = "Logout";
+        loginBtn.onclick = handleLogout;
+      } else {
+        loginBtn.textContent = "Login";
+        loginBtn.onclick = handleLogin;
+      }
+    }
+
+    function handleLogin() {
+      window.location.href = "login.html";
+      // Após login bem-sucedido: localStorage.setItem("isLoggedIn", "true");
+    }
+
+    function handleLogout() {
+      localStorage.setItem("isLoggedIn", "false");
+      alert("Você saiu da sua conta.");
+      window.location.reload();
+    }
+
+    atualizarBotao();
+  </script>
+
+  <!-- ======= NAVEGAÇÃO ======= -->
+  <nav>
+    <a href="Home.html">Home</a> |
+    <a href="Sobre.html">Quem Somos</a> |
+    <a href="Nossos Servicos.html">Nossos Serviços</a> |
+    <a href="Contacte-nos.html">Contacte-nos</a>
+  </nav>
+
+  <!-- ======= SEÇÃO PESSOAS FÍSICAS ======= -->
+  <section>
+    <div class="coluna">
+      <img src="Serviços Domésticos.jpeg" alt="Serviços Domésticos">
+      <h2>Serviços para Pessoas Físicas</h2>
+      <h3>Serviços Domésticos</h3>
+      <ul>
+        <li><a href="#">Limpeza residencial</a></li>
+        <li><a href="#">Diaristas por aplicativo</a></li>
+        <li><a href="#">Passadoria e lavagem de roupas</a></li>
+        <li><a href="#">Jardinagem e paisagismo</a></li>
+        <li><a href="#">Manutenção residencial</a></li>
+      </ul>
+    </div>
+
+    <div class="coluna">
+      <img src="Serviços Pessoais.jpeg" alt="Serviços Pessoais">
+      <h3>Serviços Pessoais</h3>
+      <ul>
+        <li><a href="#">Personal trainer</a></li>
+        <li><a href="#">Consultoria de imagem</a></li>
+        <li><a href="#">Cuidadores de idosos</a></li>
+        <li><a href="#">Babás e recreação infantil</a></li>
+        <li><a href="#">Beleza e maquiagem a domicílio</a></li>
+      </ul>
+    </div>
+
+    <div class="coluna">
+      <img src="Educação.jpeg" alt="Educação">
+      <h3>Educação Particular</h3>
+      <ul>
+        <li><a href="#">Aulas particulares e reforço escolar</a></li>
+        <li><a href="#">Preparação para concursos</a></li>
+        <li><a href="#">Mentoria e coaching pessoal</a></li>
+        <li><a href="#">Criação e manutenção de plataformas educacionais</a></li>
+        <li><a href="#">Gestão e consultoria educacional</a></li>
+        <li><a href="#">Desenvolvimento de material didático e pedagógico</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======= SEÇÃO EMPRESAS ======= -->
+  <section>
+    <div class="coluna">
+      <img src="Serviços Administrativos.jpeg" alt="Serviços Administrativos">
+      <h2>Serviços para Empresas</h2>
+      <h3>Serviços Administrativos</h3>
+      <ul>
+        <li><a href="#">Contabilidade e fiscal</a></li>
+        <li><a href="#">Recursos humanos terceirizados</a></li>
+        <li><a href="#">Consultoria empresarial</a></li>
+        <li><a href="#">Gestão financeira</a></li>
+      </ul>
+    </div>
+
+    <div class="coluna">
+      <img src="Cursos e Serviços.jpeg" alt="Cursos e Serviços">
+      <h3>Cursos e Serviços</h3>
+      <ul>
+        <li><a href="#">Criação de sites e aplicativos</a></li>
+        <li><a href="#">Suporte de TI e infraestrutura</a></li>
+        <li><a href="#">Gestão de redes sociais</a></li>
+        <li><a href="#">Marketing digital e tráfego pago</a></li>
+        <li><a href="#">Design gráfico e branding</a></li>
+      </ul>
+    </div>
+
+    <div class="coluna">
+      <img src="Serviços Sustentáveis.jpeg" alt="Serviços Sustentáveis">
+      <h3>Serviços Sustentáveis e Inovadores</h3>
+      <ul>
+        <li><a href="#">Consultoria ambiental</a></li>
+        <li><a href="#">Instalação de painéis solares</a></li>
+        <li><a href="#">Reciclagem e compostagem</a></li>
+        <li><a href="#">Reaproveitamento de resíduos</a></li>
+        <li><a href="#">Tecnologia verde</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======= RODAPÉ ======= -->
+  <footer>
+    <div class="contact">
+      📞 Tel: <a href="https://wa.me/258869019789" target="_blank">(+258) 86 901 9789</a> |
+      📧 Email: <a href="mailto:bassopaferreirajr@gmail.com">bassopaferreirajr@gmail.com</a>
+    </div>
+
+    <div class="socials">
+      🌐 Siga-nos:
+      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+      <a href="https://www.youtube.com" target="_blank">YouTube</a> |
+      <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+      <a href="https://wa.me/258869019789" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+
+  <div class="copyright">
+    &copy; “Cuidamos de tudo pra você” & “Sua preocupação é a nossa missão” - 2025
+  </div>
+
+</body>
+</html>

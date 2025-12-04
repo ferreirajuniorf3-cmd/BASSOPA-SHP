@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASSOPA SHP | Nossos Serviços</title>
+
+    <style>
+        
+      
+        body {
+            font-family: "Segoe UI", "Roboto", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: light gray;
+            color: dark gray; 
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: very dark gray; 
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid bright yellow; 
+            margin: 25px 0;
+            width: 100%;
+        }
+
+       
+        header {
+            position: relative;
+            background-image: url('Bassopa Shop2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white; 
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: semi-transparent black;
+        }
+
+        header h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 2.8em;
+            font-weight: 600;
+            text-shadow: 2px 3px 5px  soft black shadow; 
+            letter-spacing: 1px;
+        }
+
+       
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            background-color: white; 
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px  light black shadow; 
+        }
+
+        main h2 {
+            color: medium gray;
+            font-size: 1.8em;
+            text-transform: uppercase;
+            border-left: 5px solid bright yellow; 
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        main h3 {
+            margin-top: 30px;
+            color: gray ; 
+        }
+
+        main p, li {
+            font-size: 1.05em;
+            color: medium gray ;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+       
+        footer {
+            background-color: almost black; 
+            color: off-white; 
+            padding: 25px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        footer .contact, 
+        footer .socials {
+            flex: 1 1 300px;
+        }
+
+        footer a {
+            color: bright yellow; 
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .socials a::before {
+            content: "• ";
+            color: bright yellow ;
+        }
+
+        
+        .copyright {
+            background-color: #bright yellow ; 
+            color: black ; 
+            text-align: center;
+            font-weight: 600;
+            padding: 12px 0;
+            letter-spacing: 0.5px;
+        }
+
+       
+        @media (max-width: 700px) {
+            main {
+                padding: 25px;
+            }
+
+            header h1 {
+                font-size: 2.1em;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+</style>
+
+<body>
+
+    <header>
+        <h1>BASSOPA SHP – Termos, Serviços e Metas</h1>
+    </header>
+
+    <main>
+        <h2>Termos e Condições de Prestação de Serviços</h2>
+        <hr>
+
+        <h3>1. Objeto</h3>
+        <p>Estes Termos e Condições regulam a contratação de serviços e fornecimento de materiais/produtos (“stock”) prestados pela empresa <strong>BASSOPA SHP</strong>, inscrita sob o NUIT [inserir], com sede em [endereço completo].</p>
+
+        <h3>2. Serviços Prestados</h3>
+        <p>A empresa realiza serviços de manutenção, limpeza, suporte técnico e outros, conforme agendamento e aprovação de orçamento.</p>
+
+        <h3>3. Fornecimento de Stock</h3>
+        <p>Além dos serviços, a empresa fornece materiais e produtos necessários à execução das atividades contratadas. Os produtos podem ser vendidos separadamente ou incluídos no orçamento dos serviços.</p>
+
+        <h3>4. Orçamento e Pagamento</h3>
+        <ul>
+            <li>Todos os serviços e produtos são previamente orçados.</li>
+            <li>O orçamento tem validade de <strong>[X dias]</strong>.</li>
+            <li>O pagamento pode ser feito via M-Pesa, transferência bancária ou outros meios combinados.</li>
+            <li>O serviço será iniciado após a confirmação do pagamento (total ou parcial, conforme acordado).</li>
+        </ul>
+
+        <h3>5. Prazos</h3>
+        <ul>
+            <li>Os prazos de execução variam conforme a complexidade do serviço.</li>
+            <li>Produtos sob encomenda seguem o prazo informado no orçamento.</li>
+        </ul>
+
+        <h3>6. Garantias</h3>
+        <ul>
+            <li>Serviços realizados possuem garantia de <strong>[X dias/meses]</strong>, respeitadas as condições de uso.</li>
+            <li>Produtos seguem garantia do fabricante ou fornecedor.</li>
+        </ul>
+
+        <h3>7. Responsabilidades</h3>
+        <ul>
+            <li>A empresa compromete-se com qualidade, segurança e conformidade técnica.</li>
+            <li>O cliente deve fornecer acesso ao local e informações necessárias à execução.</li>
+            <li>A empresa não se responsabiliza por uso indevido dos produtos após entrega.</li>
+        </ul>
+
+        <h3>8. Cancelamento e Reagendamento</h3>
+        <ul>
+            <li>Cancelamentos devem ser comunicados com antecedência mínima de <strong>[X horas/dias]</strong>.</li>
+            <li>Cancelamentos após início do serviço poderão gerar taxa proporcional.</li>
+        </ul>
+
+        <h3>9. Troca e Devolução</h3>
+        <ul>
+            <li>Produtos com defeito de fabricação serão trocados conforme política de garantia.</li>
+            <li>Não há trocas por arrependimento, salvo previsão legal.</li>
+        </ul>
+
+        <h3>10. Privacidade e Dados</h3>
+        <p>Os dados coletados são usados exclusivamente para fins administrativos, respeitando a legislação sobre proteção de dados pessoais.</p>
+
+        <h3>11. Foro</h3>
+        <p>Fica eleito o foro da comarca de <strong>[cidade/província]</strong> para dirimir eventuais controvérsias.</p>
+
+        <p><strong>Ao contratar os serviços ou adquirir produtos da BASSOPA SHP, o cliente declara estar ciente e de acordo com os presentes Termos.</strong></p>
+    </main>
+
+   
+    <main>
+        <h2>Metas e Objetivos da BASSOPA SHP</h2>
+        <hr>
+
+        <h3>🏁 1. Metas de Crescimento</h3>
+        <ul>
+            <li>Conquistar <strong>100 novos clientes</strong> em 6 meses.</li>
+            <li>Expandir para <strong>2 novas localidades</strong> até o final do ano.</li>
+            <li>Aumentar o faturamento em <strong>20% em 12 meses</strong>.</li>
+        </ul>
+
+        <h3>💰 2. Metas Financeiras</h3>
+        <ul>
+            <li>Alcançar faturamento mensal de <strong>R$ 30.000</strong> até dezembro.</li>
+            <li>Reduzir custos operacionais em <strong>15% em 6 meses</strong>.</li>
+            <li>Aumentar a margem de lucro para <strong>40%</strong> no próximo semestre.</li>
+        </ul>
+
+        <h3>🤝 3. Metas de Atendimento</h3>
+        <ul>
+            <li>Manter satisfação do cliente acima de <strong>90%</strong>.</li>
+            <li>Responder solicitações em menos de <strong>1 hora</strong>.</li>
+            <li>Obter pelo menos <strong>50 avaliações positivas</strong> online.</li>
+        </ul>
+    </main>
+
+
+    <footer>
+        <div class="contact">
+            📞 <strong>Tel:</strong> 
+            <a href="https://wa.me/258869019789" target="_blank">(+258) 86 901 9789</a> <br>
+            📧 <strong>Email:</strong> 
+            <a href="mailto:bassopaferreirajr@gmail.com">bassopaferreirajr@gmail.com</a>
+        </div>
+
+        <div class="socials">
+            🌐 <strong>Siga-nos:</strong> 
+            <a href="https://www.facebook.com" target="_blank">Facebook</a> 
+            <a href="https://www.youtube.com" target="_blank">YouTube</a> 
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> 
+            <a href="https://wa.me/258869019789" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        &copy; 2025 BASSOPA SHP — “Cuidamos de tudo pra você” | “Sua preocupação é a nossa missão”
+    </div>
+</body>
+</html>
